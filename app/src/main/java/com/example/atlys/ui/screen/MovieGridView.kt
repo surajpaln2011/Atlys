@@ -12,11 +12,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.example.atlys.BuildConfig
+import com.example.atlys.R
 import com.example.atlys.domain.model.Movie
 import com.example.atlys.ui.viewmodel.MainViewModel
 
@@ -52,6 +54,7 @@ fun MovieGridViewImpl(
                 .fillMaxWidth(),
             model = "${BuildConfig.IMAGE_BASE_URL}${movie.poster_path}",
             contentDescription = movie.title,
+            error = painterResource(R.drawable.blank_image),
             contentScale = ContentScale.FillWidth
         )
 

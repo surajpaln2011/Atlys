@@ -77,6 +77,7 @@ fun MovieDetailsScreenImpl(
                     .padding(top = 24.dp, start = 16.dp, end = 16.dp)
                     .height(360.dp)
                     .clip(RoundedCornerShape(16.dp)),
+                error = painterResource(R.drawable.blank_image),
                 contentScale = ContentScale.Crop
             )
             Spacer(modifier = Modifier.height(24.dp))
