@@ -8,7 +8,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -73,6 +76,12 @@ fun SearchBar(viewModel: MovieListingViewModel) {
         label = { Text(text = "Search movies") },
         modifier = Modifier.fillMaxWidth(),
         singleLine = true,
+        leadingIcon = {
+            Icon(
+                imageVector = Icons.Default.Search,
+                contentDescription = "Search Icon"
+            )
+        },
         onValueChange = { searchFlow.value = it }
     )
 }
